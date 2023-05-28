@@ -54,3 +54,22 @@ Number.isNaN("A random string"); // false
 ```
 
 ES6 way to check if a given value is NaN or not
+
+### Negative Zero
+
+---
+
+```jsx
+var negativeZero = -0;
+negativeZero === -0; // true
+negativeZero === 0; // true
+negativeZero.toString(); // '0'
+```
+
+```jsx
+// ES6
+Object.is(negativeZero, -0); // true
+Object.is(negativeZero, 0); // false
+```
+
+ES6 way to check if value is Negative zero or not

@@ -73,3 +73,55 @@ Object.is(negativeZero, 0); // false
 ```
 
 ES6 way to check if value is Negative zero or not
+
+## Define Polyfills for `Object,is(..)`
+
+---
+
+```jsx
+// Polyfill for Object.is
+
+if (!Object.is || true) {
+  Object.is = function ObjectIs(x, y) {
+    const xNegZero = isNegZero(x);
+    const yNegZero = isNegZero(y);
+    if (xNegZero || yNegZero) {
+      return xNegZero && yNegZero;
+    } else if (isNan(x) && isNan(y)) {
+      return true;
+    } else {
+      return x === y;
+    }
+    // ********************************
+    function isNegZero(v) {
+      return v == 0 && 1 / v == -Infinity;
+      // If the `v` is Negative zero, `1/v` would return -Infinity
+    }
+    function isNan() {
+      // As NaN === NaN would return `false`
+      return v !== 0;
+    }
+  };
+}
+```
+
+## Fundamental Objects
+
+---
+
+| Use with New | Do not use with New |
+| ------------ | ------------------- |
+| Object()     | String()            |
+| Array()      | Number()            |
+| Function()   | Boolean()           |
+| Date()       |                     |
+| RegExp()     |                     |
+| Error()      |                     |
+
+```jsx
+const yesterday = new Date("March 6, 2019");
+yesterday.toUTCString();
+// 'Tue, 05 Mar 2019 18:30:00 GMT'
+const varGPA = String(transcript.GPA);
+// '9.61'
+```

@@ -1,3 +1,5 @@
+// It is a convention, that we can use to define something, and assign value to it later
+
 import print from "../Utils/print.js";
 
 // VAR Hoisting

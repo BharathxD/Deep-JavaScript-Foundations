@@ -1,6 +1,6 @@
 # Types
 
-### Typeof Operator
+## Typeof Operator
 
 ---
 
@@ -15,7 +15,7 @@ v = function () {};
 console.log(typeof v); // 'function'
 ```
 
-### Bigint
+## Bigint
 
 ---
 
@@ -25,7 +25,7 @@ var v = 42n;
 console.log(typeof v); // 'bigint'
 ```
 
-### Nan & isNan
+## Nan & isNan
 
 ---
 
@@ -55,7 +55,7 @@ Number.isNaN("A random string"); // false
 
 ES6 way to check if a given value is NaN or not
 
-### Negative Zero
+## Negative Zero
 
 ---
 

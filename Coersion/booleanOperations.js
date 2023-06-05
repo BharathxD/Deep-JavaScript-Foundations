@@ -11,6 +11,7 @@ function main() {
   print(`Boolean(undefined) = ${Boolean(undefined)}`);
 
   // Truthy
+  print(`Boolean(" ") = ${Boolean(" ")}`); // Check what's happening here
   print(`Boolean("foo") = ${Boolean("foo")}`);
   print(`Boolean(15) = ${Boolean(15)}`);
   print(`Boolean({a: 1}) = ${Boolean({ a: 1 })}`);
@@ -18,6 +19,7 @@ function main() {
   print(`Boolean(true) = ${Boolean(true)}`);
   print(`Boolean(function () {}) = ${Boolean(function () {})}`);
   print(`Boolean([]) = ${Boolean([])}`);
+  print(`Boolean({}) = ${Boolean({})}`);
 }
 
 main();

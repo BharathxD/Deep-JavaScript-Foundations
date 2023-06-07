@@ -8,3 +8,4 @@
 6. Dynamic Scoping
 7. IIFE (Immediately invoked function expression)
 8. Closure
+9. Memoization: Giving the functions persistent memories of their previous output-input combinations
